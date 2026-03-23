@@ -79,10 +79,10 @@ async def send_wish(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     wish = user_predictions[user_id]
 
-    await update.message.reply_text(
-        f"✨ Ваше пожелание:\n\n💌 {wish}",
-        reply_markup=keyboard
-    )
+   await update.message.reply_text(
+    f"✨ Ваше пожелание на Навруз:\n\n💌 {wish}\n\n🌿 С Наврузом! Пусть этот год принесёт тебе свет, радость и новые возможности ✨\n\n💫 Нажми ещё раз, чтобы получить новое пожелание",
+    reply_markup=keyboard
+)
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.text == "Получить пожелание 🌸":
