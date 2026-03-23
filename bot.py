@@ -81,12 +81,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.text == "Получить пожелание 🌸":
         await send_wish(update, context)
 
-import asyncio
-
 def main():
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
@@ -94,3 +89,7 @@ def main():
 
     print("Бот запущен")
     app.run_polling()
+
+
+if __name__ == "__main__":
+    main()
